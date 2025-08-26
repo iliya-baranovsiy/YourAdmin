@@ -3,7 +3,7 @@ import concurrent.futures
 from functools import partial
 from bs4 import BeautifulSoup
 import requests
-from services.db_work import games_news_db, it_news_db
+from services.db_work import games_news_db, it_news_db, crypto_news_db, science_news_db
 from services.ai_work import ai_generate
 
 
@@ -19,7 +19,6 @@ class GameScrap(BaseScrap):
         self.__url = url
 
     def get_posts_url(self):
-
         soup = BeautifulSoup(self._get_html(self.__url), 'html.parser')
         target_divs = soup.find_all('div', class_=['post-title'])
         urls = []
@@ -64,13 +63,13 @@ class GameScrap(BaseScrap):
     async def run_games_news_scraping(self):
         urls = self.get_posts_url()
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-            func_with_posted = partial(self.get_url_content, )
+            func_with_posted = partial(self.get_url_content)
             executor.map(func_with_posted, urls)
 
 
 class ItNewsScrap(BaseScrap):
-    def __init__(self, url="https://habr.com/ru/news"):
-        self.__url = url
+    def __init__(self):
+        self.__url = 'https://habr.com/ru/news'
         self.__default_url = "https://habr.com"
         self.__in_db = it_news_db.get_title()
 
@@ -114,12 +113,84 @@ class ItNewsScrap(BaseScrap):
 
     async def run_it_news_scraping(self):
         urls = self.__get_page_urls()
-        await asyncio.sleep(3)
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-            func_with_posted = partial(self.__get_url_content, )
+            func_with_posted = partial(self.__get_url_content)
             executor.map(func_with_posted, urls)
+
+
+class CryptoScrap(BaseScrap):
+    def __init__(self):
+        self.__url = 'https://forklog.com/news'
+        self.__db_select = crypto_news_db.get_title()
+
+    def __get_page_urls(self):
+        soup = BeautifulSoup(self._get_html(self.__url), 'html.parser')
+        div_list = soup.find_all('div', class_=['cell'])
+        urls_list = []
+        for div in div_list:
+            into_div = div.find('a', href=True)
+            urls_list.append(into_div['href'])
+        return urls_list
+
+    def __get_content(self, url):
+        soup = BeautifulSoup(self._get_html(url), 'html.parser')
+        title = soup.find('h1').text
+        if title in crypto_news_db.get_title():
+            return 0
+        else:
+            text = ''
+            div_content = soup.find('div', class_='article_thumbnail')
+            img_url = div_content.find('img').attrs['src']
+            post_content = soup.find('div', class_='post_content')
+            paragraphs = post_content.find_all('p')
+            for p in paragraphs:
+                text += p.text
+            ai_text = ai_generate(text)
+            crypto_news_db.insert_data(title=title, picture=img_url, text=ai_text)
+
+    async def run_crypto_scraper(self):
+        urls = self.__get_page_urls()
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            target_func = partial(self.__get_content)
+            executor.map(target_func, urls)
+
+
+class ScienceScrap(BaseScrap):
+    def __init__(self):
+        self.__url = 'https://new-science.ru'
+        self.__titles_in_db = science_news_db.get_title()
+
+    def __get_urls(self):
+        soup = BeautifulSoup(self._get_html(self.__url), 'html.parser')
+        a_tags = soup.find_all('a', class_=['more-link button'])
+        urls = []
+        for a in a_tags:
+            urls.append(self.__url + '/' + a['href'])
+        return urls
+
+    def __get_content(self, url):
+        soup = BeautifulSoup(self._get_html(url), 'html.parser')
+        title = soup.find('h1', class_=['post-title entry-title']).text.strip()
+        if title in science_news_db.get_title():
+            return 0
+        else:
+            picture = self.__url + soup.find('figure', class_=['single-featured-image']).find('img').attrs['src']
+            text = ''
+            paragraphs = soup.find('div', class_=['entry-content entry clearfix']).find_all('p')
+            for p in paragraphs:
+                text += p.text
+            ai_text = ai_generate(text)
+            science_news_db.insert_data(title=title, picture=picture, text=ai_text)
+
+    async def run_science_scraping(self):
+        urls = self.__get_urls()
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            target_func = partial(self.__get_content)
+            executor.map(target_func, urls)
 
 
 game_news_scrap = GameScrap()
 it_news_scrap = ItNewsScrap()
-asyncio.run(it_news_scrap.run_it_news_scraping())
+crypto_news_scrap = CryptoScrap()
+science_news_scrap = ScienceScrap()
+asyncio.run(science_news_scrap.run_science_scraping())
