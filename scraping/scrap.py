@@ -14,8 +14,8 @@ class BaseScrap:
 
 
 class GameScrap(BaseScrap):
-    def __init__(self, posted=None, url="https://www.playground.ru/news"):
-        self.__posted = posted or []
+    def __init__(self, url="https://www.playground.ru/news"):
+        self.__posted = games_news_db.get_title()
         self.__url = url
 
     def get_posts_url(self):
@@ -68,5 +68,15 @@ class GameScrap(BaseScrap):
             executor.map(func_with_posted, urls)
 
 
-game_news_scrap = GameScrap(posted=[])
-asyncio.run(game_news_scrap.run_scraping())
+# game_news_scrap = GameScrap()
+# asyncio.run(game_news_scrap.run_scraping())
+class ItNewsScrap(BaseScrap):
+    def __init__(self, url="https://habr.com/ru/news/940920"):
+        self.__url = url
+
+    def ret_data(self):
+        return self.get_html(self.__url)
+
+
+i = ItNewsScrap()
+print(i.ret_data())
