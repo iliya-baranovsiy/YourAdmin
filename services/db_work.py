@@ -19,7 +19,7 @@ class GameNews(Base):
 class ItNews(Base):
     __tablename__ = "it_news"
     id = Column(Integer, primary_key=True, autoincrement=True)
-    title = Column(String)
+    title = Column(String, unique=True)
     text = Column(String)
     picture = Column(String)
     adding_Date = Column(Date)
@@ -63,5 +63,6 @@ class ItNewsWork(BaseWork):
 
 
 games_news_db = GameNewsWork()
-# print(games_news_db.get_title())
+it_news_db = ItNewsWork()
+base = BaseWork()
 
