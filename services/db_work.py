@@ -43,6 +43,15 @@ class ScienceNews(Base):
     adding_Date = Column(Date)
 
 
+class CultureNews(Base):
+    __tablename__ = "culture_news"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    title = Column(String, unique=True)
+    text = Column(String)
+    picture = Column(String)
+    adding_Date = Column(Date)
+
+
 class BaseWork:
     def __init__(self):
         self.__engine = create_engine(DATA_BASE_URL)
@@ -108,10 +117,24 @@ class ScienceNewsWork(BaseWork):
             return [i[0] for i in data]
 
 
+class CultureNewsWork(BaseWork):
+    def insert_data(self, title, text, picture):
+        with self._Session() as session:
+            new_entry = CultureNews(title=title, text=text, picture=picture, adding_Date=datetime.today().date())
+            session.add(new_entry)
+            session.commit()
+            session.close()
+
+    def get_title(self):
+        with self._Session() as session:
+            data = session.query(CultureNews.title)
+            return [i[0] for i in data]
+
+
 games_news_db = GameNewsWork()
 it_news_db = ItNewsWork()
 crypto_news_db = CryptoNewsWork()
 science_news_db = ScienceNewsWork()
-
+culture_news_db = CultureNewsWork()
 base = BaseWork()
-#base._create_bases()
+# base._create_bases()

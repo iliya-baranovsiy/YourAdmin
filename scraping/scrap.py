@@ -3,7 +3,7 @@ import concurrent.futures
 from functools import partial
 from bs4 import BeautifulSoup
 import requests
-from services.db_work import games_news_db, it_news_db, crypto_news_db, science_news_db
+from services.db_work import games_news_db, it_news_db, crypto_news_db, science_news_db, culture_news_db
 from services.ai_work import ai_generate
 
 
@@ -189,8 +189,49 @@ class ScienceScrap(BaseScrap):
             executor.map(target_func, urls)
 
 
+class CultureScrap(BaseScrap):
+    def __init__(self):
+        self.__url = 'https://www.buro247.ru/beauty'
+        self.__base_url = 'https://www.buro247.ru'
+        self.__titles_in_db = culture_news_db.get_title()
+
+    def __get_urls(self):
+        soup = BeautifulSoup(self._get_html(self.__url), 'html.parser')
+        divs = soup.find_all('div', class_=['news_item'])
+        url_list = []
+        for div in divs:
+            a_tags = div.find_all('a', href=True)
+            for a in a_tags:
+                url = a['href']
+                if '.html' in url:
+                    url_list.append(self.__base_url + url)
+        return url_list
+
+    def __get_url_content(self, url):
+        soup = BeautifulSoup(self._get_html(url), 'html.parser')
+        title = soup.find('h1', class_=['article_title']).text
+        if title in self.__titles_in_db:
+            return 0
+        else:
+            picture = self.__base_url + soup.find('figure', class_=['stk-reset stk-image-figure']).find('img').attrs[
+                'src']
+            paragraphs = soup.find_all('p', class_=['stk-reset'])
+            text = ''
+            for p in paragraphs:
+                text += p.text
+            ai_text = ai_generate(text)
+            culture_news_db.insert_data(title=title, picture=picture, text=ai_text)
+
+    async def run_culture_scraping(self):
+        urls = self.__get_urls()
+        with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
+            target_func = partial(self.__get_url_content)
+            executor.map(target_func, urls)
+
+
 game_news_scrap = GameScrap()
 it_news_scrap = ItNewsScrap()
 crypto_news_scrap = CryptoScrap()
 science_news_scrap = ScienceScrap()
-asyncio.run(science_news_scrap.run_science_scraping())
+culture_news_scrap = CultureScrap()
+asyncio.run(culture_news_scrap.run_culture_scraping())
