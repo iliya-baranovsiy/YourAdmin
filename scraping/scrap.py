@@ -8,7 +8,7 @@ from services.scrap_db_work import games_news_db, it_news_db, crypto_news_db, sc
     sport_mews_db, base
 from services.ai_work import ai_generate
 import logging
-from datetime import datetime, timedelta
+from datetime import datetime
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(filename='scrap_logs.log', level=logging.INFO)
@@ -302,14 +302,6 @@ class SportScrap(BaseScrap):
         logger.info('end of sport scrap')
 
 
-game_news_scrap = GameScrap()
-it_news_scrap = ItNewsScrap()
-crypto_news_scrap = CryptoScrap()
-science_news_scrap = ScienceScrap()
-culture_news_scrap = CultureScrap()
-sport_news_scrap = SportScrap()
-
-
 def clean_db():
     while True:
         base.delete_old_data()
@@ -340,15 +332,9 @@ def run_scraping():
         time.sleep(3600)
 
 
-# clean_db()
-# run_scraping()
-def test_1():
-    while True:
-        print('Первая ф отработала')
-        time.sleep(1)
-
-
-def test_2():
-    while True:
-        print('Вторая ф отработала')
-        time.sleep(2)
+game_news_scrap = GameScrap()
+it_news_scrap = ItNewsScrap()
+crypto_news_scrap = CryptoScrap()
+science_news_scrap = ScienceScrap()
+culture_news_scrap = CultureScrap()
+sport_news_scrap = SportScrap()

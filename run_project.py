@@ -1,8 +1,8 @@
-from scraping.scrap import test_1, test_2
+from scraping.scrap import clean_db, run_scraping
 import threading
 
 if __name__ == '__main__':
-    t1 = threading.Thread(target=test_1)
-    t2 = threading.Thread(target=test_2)
-    t1.start()
-    t2.start()
+    clean = threading.Thread(target=clean_db)
+    run_scrap = threading.Thread(target=run_scraping)
+    run_scrap.start()
+    clean.start()
