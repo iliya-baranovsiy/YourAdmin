@@ -1,12 +1,14 @@
 import asyncio
 import concurrent.futures
+import time
 from functools import partial
 from bs4 import BeautifulSoup
 import requests
 from services.scrap_db_work import games_news_db, it_news_db, crypto_news_db, science_news_db, culture_news_db, \
-    sport_mews_db
+    sport_mews_db, base
 from services.ai_work import ai_generate
 import logging
+from datetime import datetime, timedelta
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(filename='scrap_logs.log', level=logging.INFO)
@@ -24,7 +26,7 @@ class GameScrap(BaseScrap):
         self.__posted = games_news_db.get_title()
         self.__url = url
 
-    def get_posts_url(self):
+    def __get_posts_url(self):
         soup = BeautifulSoup(self._get_html(self.__url), 'html.parser')
         target_divs = soup.find_all('div', class_=['post-title'])
         logger.info('Start scrap of game urls posts')
@@ -36,7 +38,7 @@ class GameScrap(BaseScrap):
         logger.info('Scrapping of game urls posts is success')
         return urls
 
-    def get_url_content(self, url):
+    def __get_url_content(self, url):
         title = ''
         html_text = self._get_html(url)
         soup = BeautifulSoup(html_text, 'html.parser')
@@ -70,10 +72,10 @@ class GameScrap(BaseScrap):
             games_news_db.insert_data(title=title, text=text, picture=pic_url)
 
     async def run_games_news_scraping(self):
-        urls = self.get_posts_url()
+        urls = self.__get_posts_url()
         logger.info('Start game scraper')
         with concurrent.futures.ThreadPoolExecutor(max_workers=10) as executor:
-            func_with_posted = partial(self.get_url_content)
+            func_with_posted = partial(self.__get_url_content)
             executor.map(func_with_posted, urls)
         logger.info('End of game scraper work')
 
@@ -306,3 +308,47 @@ crypto_news_scrap = CryptoScrap()
 science_news_scrap = ScienceScrap()
 culture_news_scrap = CultureScrap()
 sport_news_scrap = SportScrap()
+
+
+def clean_db():
+    while True:
+        base.delete_old_data()
+        logger.info('Old data delete')
+        time.sleep(86400)
+
+
+def run_scraping():
+    while True:
+        now = datetime.now().time().hour
+        if now == 8:
+            asyncio.run(sport_news_scrap.run_sport_scraping())
+        elif now == 10:
+            asyncio.run(it_news_scrap.run_it_news_scraping())
+        elif now == 12:
+            asyncio.run(crypto_news_scrap.run_crypto_scraper())
+        elif now == 14:
+            asyncio.run(game_news_scrap.run_games_news_scraping())
+        elif now == 16:
+            asyncio.run(science_news_scrap.run_science_scraping())
+        elif now == 18:
+            asyncio.run(culture_news_scrap.run_culture_scraping())
+        elif now == 20:
+            asyncio.run(sport_news_scrap.run_sport_scraping())
+        elif now == 22:
+            asyncio.run(crypto_news_scrap.run_crypto_scraper())
+        logger.info(f'Сбор выполнен в {now} часов')
+        time.sleep(3600)
+
+
+# clean_db()
+# run_scraping()
+def test_1():
+    while True:
+        print('Первая ф отработала')
+        time.sleep(1)
+
+
+def test_2():
+    while True:
+        print('Вторая ф отработала')
+        time.sleep(2)

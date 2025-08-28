@@ -1,8 +1,8 @@
-from sqlalchemy import create_engine, Column, Integer, String, Date
+from sqlalchemy import create_engine, Column, Integer, String, Date, delete
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 from configurations.loadEnv import DATA_BASE_URL
-from datetime import datetime
+from datetime import datetime, timedelta
 
 Base = declarative_base()
 
@@ -69,6 +69,15 @@ class BaseWork:
     def _create_bases(self):
         Base.metadata.create_all(self.__engine)
 
+    def delete_old_data(self):
+        class_list = [GameNews, ItNews, CultureNews, CryptoNews, SportNews, ScienceNews]
+        target_date = datetime.now().date() - timedelta(days=2)
+        with self._Session() as session:
+            for i in class_list:
+                stmt = delete(i).where(i.adding_Date == target_date)
+                session.execute(stmt)
+            session.commit()
+
 
 class GameNewsWork(BaseWork):
     def insert_data(self, title, text, picture):
@@ -76,7 +85,6 @@ class GameNewsWork(BaseWork):
             new_entry = GameNews(title=title, text=text, picture=picture, adding_Date=datetime.today().date())
             session.add(new_entry)
             session.commit()
-            session.close()
 
     def get_title(self):
         with self._Session() as session:
@@ -90,7 +98,6 @@ class ItNewsWork(BaseWork):
             new_entry = ItNews(title=title, text=text, picture=picture, adding_Date=datetime.today().date())
             session.add(new_entry)
             session.commit()
-            session.close()
 
     def get_title(self):
         with self._Session() as session:
@@ -104,7 +111,6 @@ class CryptoNewsWork(BaseWork):
             new_entry = CryptoNews(title=title, text=text, picture=picture, adding_Date=datetime.today().date())
             session.add(new_entry)
             session.commit()
-            session.close()
 
     def get_title(self):
         with self._Session() as session:
@@ -118,7 +124,6 @@ class ScienceNewsWork(BaseWork):
             new_entry = ScienceNews(title=title, text=text, picture=picture, adding_Date=datetime.today().date())
             session.add(new_entry)
             session.commit()
-            session.close()
 
     def get_title(self):
         with self._Session() as session:
@@ -132,7 +137,6 @@ class CultureNewsWork(BaseWork):
             new_entry = CultureNews(title=title, text=text, picture=picture, adding_Date=datetime.today().date())
             session.add(new_entry)
             session.commit()
-            session.close()
 
     def get_title(self):
         with self._Session() as session:
@@ -146,7 +150,6 @@ class SportNewsWork(BaseWork):
             new_entry = SportNews(title=title, text=text, picture=picture, adding_Date=datetime.today().date())
             session.add(new_entry)
             session.commit()
-            session.close()
 
     def get_title(self):
         with self._Session() as session:
@@ -161,4 +164,3 @@ science_news_db = ScienceNewsWork()
 culture_news_db = CultureNewsWork()
 sport_mews_db = SportNewsWork()
 base = BaseWork()
-#base._create_bases()
