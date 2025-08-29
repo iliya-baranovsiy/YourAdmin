@@ -6,6 +6,7 @@ import asyncio
 from bot_logic.bot_services.keybords.keybords import *
 from aiogram.fsm.context import FSMContext
 from aiogram.filters.state import StateFilter
+from bot_logic.bot_services.keybords.logic_kb import chanells_kb
 
 router = Router()
 
@@ -23,13 +24,15 @@ async def start_dialog(msg: Message):
 @router.callback_query(F.data == "my_channels")
 async def user_channels(call: CallbackQuery):
     tg_id = call.message.chat.id
-    user_channels = await channels_db_work.get_user_channels(owner_id=tg_id)
-    if not user_channels:
+    user_channels_count = await users_db.get_channel_count(tg_id=tg_id)
+    if user_channels_count == 0:
         buttons = InlineKeyboardMarkup(inline_keyboard=add_channel_menu)
         await call.message.edit_text("Список твоих каналов пуст. Ты моежшь добавить новый канал 👇",
                                      reply_markup=buttons)
     else:
-        pass
+        buttons_list = await chanells_kb(owner_id=tg_id, count_channels=user_channels_count)
+        buttons = InlineKeyboardMarkup(inline_keyboard=buttons_list)
+        await call.message.edit_text("Твои каналы 👇", reply_markup=buttons)
 
 
 @router.callback_query(F.data == "service_info")
