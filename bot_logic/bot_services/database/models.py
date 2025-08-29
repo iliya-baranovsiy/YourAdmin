@@ -1,5 +1,5 @@
-from sqlalchemy.orm import declarative_base
-from sqlalchemy import Column, Integer, create_engine, String, DateTime, BigInteger
+from sqlalchemy.orm import declarative_base, relationship
+from sqlalchemy import Column, Integer, create_engine, String, DateTime, BigInteger, ForeignKey
 from configurations.loadEnv import DATA_BASE_URL
 import asyncio
 
@@ -20,6 +20,17 @@ class Channels(Base):
     theme = Column(String, default=None)
     type = Column(String, default=None)
     post_count = Column(Integer, default=0)
+
+    times = relationship("TimesIntervals", back_populates="channel", cascade="all, delete, delete-orphan")
+
+
+class TimesIntervals(Base):
+    __tablename__ = 'times_intervals'
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    channel_id = Column(BigInteger, ForeignKey('channels.channel_id', ondelete='CASCADE'))
+    time = Column(String)
+
+    channel = relationship("Channels", back_populates="times")
 
 
 def create_tables():

@@ -27,7 +27,7 @@ async def posting_menu(channel_id, channel_name):
     buttons = [
         [InlineKeyboardButton(text='Выбрать тему постов', callback_data=f'theme_{channel_id}_{channel_name}')],
         [InlineKeyboardButton(text='Выбрать тип постов', callback_data=f'type_{channel_id}_{channel_name}')],
-        [InlineKeyboardButton(text='Установить время постов', callback_data=f'time_{channel_id}_{channel_name}')],
+        [InlineKeyboardButton(text='Время постов', callback_data=f'time_{channel_id}_{channel_name}')],
         [InlineKeyboardButton(text='Вернуться в меню 📊', callback_data='back_main_menu')]
     ]
     return buttons

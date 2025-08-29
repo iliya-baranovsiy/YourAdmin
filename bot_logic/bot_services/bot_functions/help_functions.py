@@ -1,6 +1,6 @@
 from bot_logic.bot_services.bot_functions.bot_instanse import bot
 import asyncio
-
+from datetime import datetime
 
 async def check_channel(channel_id):
     try:
@@ -29,4 +29,14 @@ async def refactoring(text):
     elif text == 'news':
         return 'новости'
 
+
+async def time_validation(text_time: str):
+    try:
+        datetime.strptime(text_time, '%H:%M')
+        return True
+    except:
+        return False
+
+
+#print(asyncio.run(time_validation('01:55')))
 # print(asyncio.run(is_admin_in_channel(-1002989249599)))

@@ -24,7 +24,8 @@ async def get_id(msg: Message, state: FSMContext):
     status = await check_channel(channel_id)
     if status:
         try:
-            buttons = InlineKeyboardMarkup(inline_keyboard=settings_or_menu)
+            buttons = InlineKeyboardMarkup(
+                inline_keyboard=await settings_or_menu(channel_id=channel_id, channel_name=status))
             await channels_db_work.write_channel(channel_id=int(channel_id), owner=owner_id, title=status)
             await users_db.update_channel_count(tg_id=owner_id, operate='+')
             await state.clear()

@@ -5,11 +5,12 @@ from bot_logic.bot_services.bot_functions.bot_instanse import bot
 from handlers.start_handle import router
 from handlers.add_channel_handler import adding_router
 from handlers.channel_settings_handler import setting_router
+from handlers.time_handler import time_router
 
 
 async def main():
     dp = Dispatcher(storage=MemoryStorage())
-    dp.include_routers(router, adding_router,setting_router)
+    dp.include_routers(router, adding_router, setting_router, time_router)
     await dp.start_polling(bot, allowed_updates=dp.resolve_used_update_types())
 
 

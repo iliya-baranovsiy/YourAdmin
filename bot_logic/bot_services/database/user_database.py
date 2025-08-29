@@ -3,16 +3,19 @@ from sqlalchemy.orm import declarative_base
 from sqlalchemy.dialects.postgresql import insert
 from configurations.loadEnv import ASYNC_DATA_BASE_URL
 from sqlalchemy import select, update, delete
-from bot_logic.bot_services.database.models import User, Channels
+from bot_logic.bot_services.database.models import User, Channels, TimesIntervals
 import asyncio
 
 Base = declarative_base()
 
 
-class UserDbWork:
+class BaseWork:
     def __init__(self):
         self.__async_engine = create_async_engine(url=ASYNC_DATA_BASE_URL)
         self.session = async_sessionmaker(self.__async_engine, expire_on_commit=False)
+
+
+class UserDbWork(BaseWork):
 
     async def write_user(self, tg_id):
         async with self.session() as session:
@@ -38,10 +41,7 @@ class UserDbWork:
                 await session.execute(new)
 
 
-class ChannelWork:
-    def __init__(self):
-        self.__async_engine = create_async_engine(url=ASYNC_DATA_BASE_URL)
-        self.session = async_sessionmaker(self.__async_engine, expire_on_commit=False)
+class ChannelWork(BaseWork):
 
     async def get_user_channels(self, owner_id):
         async with self.session() as session:
@@ -103,8 +103,45 @@ class ChannelWork:
                 rows = result.all()
                 return rows[0]
 
+    async def plus_posts_a_day(self, channel_id):
+        async with self.session() as session:
+            async with session.begin():
+                new = update(Channels).where(Channels.channel_id == channel_id).values(
+                    post_count=Channels.post_count + 1)
+                await session.execute(new)
+
+
+class TimesIntervalsWork(BaseWork):
+    async def set_time(self, channel_id, target_time):
+        async with self.session() as session:
+            async with session.begin():
+                new_time = insert(TimesIntervals).values(channel_id=int(channel_id), time=target_time)
+                await session.execute(new_time)
+
+    async def delete_time(self, channel_id, time_to_del):
+        async with self.session() as session:
+            async with session.begin():
+                result = await session.execute(
+                    select(TimesIntervals).where(
+                        TimesIntervals.channel_id == int(channel_id),
+                        TimesIntervals.time == time_to_del
+                    )
+                )
+                row = result.scalar_one_or_none()
+                await session.delete(row)
+
+    async def get_times(self, channel_id):
+        async with self.session() as session:
+            async with session.begin():
+                query = select(TimesIntervals.time).where(TimesIntervals.channel_id == int(channel_id))
+                result = await session.execute(query)
+                rows = result.all()
+                return rows
+
 
 users_db = UserDbWork()
 channels_db_work = ChannelWork()
-#asyncio.run(channels_db_work.get_channel_settings(-1002798314681))
+times_db = TimesIntervalsWork()
+# print(asyncio.run(channels_db_work.get_date_count(-1002798314681)))
+# asyncio.run(channels_db_work.get_channel_settings(-1002798314681))
 # print(asyncio.run(channels_db_work.get_user_channels(1832511762)))
