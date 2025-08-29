@@ -2,6 +2,7 @@ from aiogram import F, Router
 from aiogram.types import Message
 from bot_logic.bot_services.database.user_database import users_db, channels_db_work
 from bot_logic.bot_services.keybords.setting_kb import *
+from bot_logic.bot_services.bot_functions.help_functions import refactoring
 
 setting_router = Router()
 
@@ -44,4 +45,163 @@ async def back_to_channel_menu(call: CallbackQuery):
     channel_id = data[1]
     channel_name = data[2]
     buttons = InlineKeyboardMarkup(inline_keyboard=await channel_info_kb(channel_id, channel_name))
-    await call.message.edit_text(f'Меню по каналу {channel_name}', reply_markup=buttons)
+
+    await call.message.edit_text(
+        f"Меню по каналу {channel_name}", reply_markup=buttons)
+
+
+@setting_router.callback_query(F.data.startswith(("settings")))
+async def setting_menu(call: CallbackQuery):
+    data = call.data.split('_')
+    channel_id = data[1]
+    channel_name = data[2]
+    data_choice = await channels_db_work.get_channel_settings(channel_id=int(channel_id))
+    topic_theme = f"Тема: {await refactoring(data_choice[0]) if data_choice[0] is not None else 'Не указана'}\n"
+    topic_type = f"Тип поста: {await refactoring(data_choice[1]) if data_choice[1] is not None else 'Не указана'}"
+    topic_text = topic_theme + topic_type
+    buttons = InlineKeyboardMarkup(inline_keyboard=await posting_menu(channel_id=channel_id, channel_name=channel_name))
+    await call.message.edit_text(f"Настройки постинга для {channel_name}\n{topic_text}", reply_markup=buttons)
+
+
+@setting_router.callback_query(F.data.startswith(("theme")))
+async def theme_menu_f(call: CallbackQuery):
+    data = call.data.split('_')
+    channel_id = data[1]
+    channel_name = data[2]
+    buttons = InlineKeyboardMarkup(inline_keyboard=await theme_menu(channel_id, channel_name))
+    await call.message.edit_text("Выбери тему для постов", reply_markup=buttons)
+
+
+@setting_router.callback_query(F.data.startswith(("postnigmenu")))
+async def back_to_posting_settings(call: CallbackQuery):
+    data = call.data.split('_')
+    channel_id = data[1]
+    channel_name = data[2]
+    data_choice = await channels_db_work.get_channel_settings(channel_id=int(channel_id))
+    topic_theme = f"Тема: {await refactoring(data_choice[0]) if data_choice[0] is not None else 'Не указана'}\n"
+    topic_type = f"Тип поста: {await refactoring(data_choice[1]) if data_choice[1] is not None else 'Не указана'}"
+    topic_text = topic_theme + topic_type
+    buttons = InlineKeyboardMarkup(inline_keyboard=await posting_menu(channel_id=channel_id, channel_name=channel_name))
+    await call.message.edit_text(f"Настройки постинга для {channel_name}\n{topic_text}", reply_markup=buttons)
+
+
+@setting_router.callback_query(F.data.startswith(("game")))
+async def set_game_theme(call: CallbackQuery):
+    data = call.data.split('_')
+    channel_id = data[1]
+    channel_name = data[2]
+    try:
+        await channels_db_work.set_theme(channel_id=int(channel_id), theme='game')
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Тема установлена успешно, чтобы сменить тему, просто выбери другую',
+                                     reply_markup=buttons)
+    except:
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Произошла ошика, поробуй ещё раз',
+                                     reply_markup=buttons)
+
+
+@setting_router.callback_query(F.data.startswith(("it")))
+async def set_it_theme(call: CallbackQuery):
+    data = call.data.split('_')
+    channel_id = data[1]
+    channel_name = data[2]
+    try:
+        await channels_db_work.set_theme(channel_id=int(channel_id), theme='it')
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Тема установлена успешно, чтобы сменить тему, просто выбери другую',
+                                     reply_markup=buttons)
+    except:
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Произошла ошика, поробуй ещё раз',
+                                     reply_markup=buttons)
+
+
+@setting_router.callback_query(F.data.startswith(("crypto")))
+async def set_crypto_theme(call: CallbackQuery):
+    data = call.data.split('_')
+    channel_id = data[1]
+    channel_name = data[2]
+    try:
+        await channels_db_work.set_theme(channel_id=int(channel_id), theme='crypto')
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Тема установлена успешно, чтобы сменить тему, просто выбери другую',
+                                     reply_markup=buttons)
+    except:
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Произошла ошика, поробуй ещё раз',
+                                     reply_markup=buttons)
+
+
+@setting_router.callback_query(F.data.startswith(("sport")))
+async def set_sport_theme(call: CallbackQuery):
+    data = call.data.split('_')
+    channel_id = data[1]
+    channel_name = data[2]
+    try:
+        await channels_db_work.set_theme(channel_id=int(channel_id), theme='sport')
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Тема установлена успешно, чтобы сменить тему, просто выбери другую',
+                                     reply_markup=buttons)
+    except:
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Произошла ошика, поробуй ещё раз',
+                                     reply_markup=buttons)
+
+
+@setting_router.callback_query(F.data.startswith(("culture")))
+async def set_culture_theme(call: CallbackQuery):
+    data = call.data.split('_')
+    channel_id = data[1]
+    channel_name = data[2]
+    try:
+        await channels_db_work.set_theme(channel_id=int(channel_id), theme='culture')
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Тема установлена успешно, чтобы сменить тему, просто выбери другую',
+                                     reply_markup=buttons)
+    except:
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Произошла ошика, поробуй ещё раз',
+                                     reply_markup=buttons)
+
+
+@setting_router.callback_query(F.data.startswith(("science")))
+async def set_science_theme(call: CallbackQuery):
+    data = call.data.split('_')
+    channel_id = data[1]
+    channel_name = data[2]
+    try:
+        await channels_db_work.set_theme(channel_id=int(channel_id), theme='science')
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Тема установлена успешно, чтобы сменить тему, просто выбери другую',
+                                     reply_markup=buttons)
+    except:
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Произошла ошика, поробуй ещё раз',
+                                     reply_markup=buttons)
+
+
+@setting_router.callback_query(F.data.startswith(("type")))
+async def type_menu_handler(call: CallbackQuery):
+    data = call.data.split('_')
+    channel_id = data[1]
+    channel_name = data[2]
+    buttons = InlineKeyboardMarkup(inline_keyboard=await type_menu(channel_id, channel_name))
+    await call.message.edit_text('Выбери тип новости',
+                                 reply_markup=buttons)
+
+
+@setting_router.callback_query(F.data.startswith(("news")))
+async def set_news_type(call: CallbackQuery):
+    data = call.data.split('_')
+    channel_id = data[1]
+    channel_name = data[2]
+    try:
+        await channels_db_work.set_post_type(channel_id=int(channel_id), post_type='news')
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Тип установлена успешно, чтобы сменить тип, просто выбери другую',
+                                     reply_markup=buttons)
+    except:
+        buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
+        await call.message.edit_text('Произошла ошика, поробуй ещё раз',
+                                     reply_markup=buttons)

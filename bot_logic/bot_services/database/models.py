@@ -19,7 +19,7 @@ class Channels(Base):
     title = Column(String)
     theme = Column(String, default=None)
     type = Column(String, default=None)
-    post_count = Column(Integer, default=None)
+    post_count = Column(Integer, default=0)
 
 
 def create_tables():

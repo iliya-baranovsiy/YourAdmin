@@ -12,4 +12,21 @@ async def check_channel(channel_id):
     except:
         return None
 
+
+async def refactoring(text):
+    if text == 'sport':
+        return 'спорт'
+    elif text == 'culture':
+        return 'культура'
+    elif text == 'crypto':
+        return 'крипта'
+    elif text == 'it':
+        return 'IT/технологии'
+    elif text == 'science':
+        return 'наука'
+    elif text == 'game':
+        return 'игры'
+    elif text == 'news':
+        return 'новости'
+
 # print(asyncio.run(is_admin_in_channel(-1002989249599)))

@@ -21,3 +21,47 @@ async def agree_or_not(channel_id, channel_name):
 back_to_main = [
     [InlineKeyboardButton(text='Вернуться в меню 📊', callback_data='back_main_menu')]
 ]
+
+
+async def posting_menu(channel_id, channel_name):
+    buttons = [
+        [InlineKeyboardButton(text='Выбрать тему постов', callback_data=f'theme_{channel_id}_{channel_name}')],
+        [InlineKeyboardButton(text='Выбрать тип постов', callback_data=f'type_{channel_id}_{channel_name}')],
+        [InlineKeyboardButton(text='Установить время постов', callback_data=f'time_{channel_id}_{channel_name}')],
+        [InlineKeyboardButton(text='Вернуться в меню 📊', callback_data='back_main_menu')]
+    ]
+    return buttons
+
+
+async def theme_menu(channel_id, channel_name):
+    buttons = [
+        [
+            InlineKeyboardButton(text='Игры', callback_data=f'game_{channel_id}_{channel_name}'),
+            InlineKeyboardButton(text='IT/технологии', callback_data=f'it_{channel_id}_{channel_name}')
+        ],
+        [
+            InlineKeyboardButton(text='Криптовалюта', callback_data=f'crypto_{channel_id}_{channel_name}'),
+            InlineKeyboardButton(text='Спорт', callback_data=f'sport_{channel_id}_{channel_name}')
+        ],
+        [
+            InlineKeyboardButton(text='Культура', callback_data=f'culture_{channel_id}_{channel_name}'),
+            InlineKeyboardButton(text='Наука', callback_data=f'science_{channel_id}_{channel_name}')
+        ],
+        [InlineKeyboardButton(text="Вернуться назад", callback_data=f'postnigmenu_{channel_id}_{channel_name}')]
+    ]
+    return buttons
+
+
+async def back_to_settings_menu(channel_id, channel_name):
+    buttons = [
+        [InlineKeyboardButton(text="Вернуться назад", callback_data=f'postnigmenu_{channel_id}_{channel_name}')]
+    ]
+    return buttons
+
+
+async def type_menu(channel_id, channel_name):
+    buttons = [
+        [InlineKeyboardButton(text='Новости', callback_data=f'news_{channel_id}_{channel_name}')],
+        [InlineKeyboardButton(text="Вернуться назад", callback_data=f'postnigmenu_{channel_id}_{channel_name}')]
+    ]
+    return buttons

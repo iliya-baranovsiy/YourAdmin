@@ -64,7 +64,47 @@ class ChannelWork:
                 channel_to_delete = await session.get(Channels, int(channel_id))
                 await session.delete(channel_to_delete)
 
+    async def set_theme(self, channel_id, theme):
+        async with self.session() as session:
+            async with session.begin():
+                if theme == 'sport':
+                    new = update(Channels).where(Channels.channel_id == channel_id).values(
+                        theme=theme)
+                elif theme == 'crypto':
+                    new = update(Channels).where(Channels.channel_id == channel_id).values(
+                        theme=theme)
+                elif theme == 'game':
+                    new = update(Channels).where(Channels.channel_id == channel_id).values(
+                        theme=theme)
+                elif theme == 'it':
+                    new = update(Channels).where(Channels.channel_id == channel_id).values(
+                        theme=theme)
+                elif theme == 'culture':
+                    new = update(Channels).where(Channels.channel_id == channel_id).values(
+                        theme=theme)
+                elif theme == 'science':
+                    new = update(Channels).where(Channels.channel_id == channel_id).values(
+                        theme=theme)
+                await session.execute(new)
+
+    async def set_post_type(self, channel_id, post_type):
+        async with self.session() as session:
+            async with session.begin():
+                if post_type == 'news':
+                    new = update(Channels).where(Channels.channel_id == channel_id).values(
+                        type=post_type)
+                await session.execute(new)
+
+    async def get_channel_settings(self, channel_id):
+        async with self.session() as session:
+            async with session.begin():
+                query = select(Channels.theme, Channels.type).where(Channels.channel_id == channel_id)
+                result = await session.execute(query)
+                rows = result.all()
+                return rows[0]
+
 
 users_db = UserDbWork()
 channels_db_work = ChannelWork()
+#asyncio.run(channels_db_work.get_channel_settings(-1002798314681))
 # print(asyncio.run(channels_db_work.get_user_channels(1832511762)))
