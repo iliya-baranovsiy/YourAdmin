@@ -56,3 +56,12 @@ async def back_main_menu(call: CallbackQuery, state: FSMContext):
 async def free_mes(msg: Message):
     buttons = InlineKeyboardMarkup(inline_keyboard=main_menu)
     await msg.answer('Выбери один пункт из меню, чтобы продолжить ☺️', reply_markup=buttons)
+
+
+@router.callback_query(F.data == 'back_to_chan_info')
+async def back_to_channel_menu(call: CallbackQuery):
+    tg_id = call.message.chat.id
+    user_channels_count = await users_db.get_channel_count(tg_id=tg_id)
+    buttons_list = await chanells_kb(owner_id=tg_id, count_channels=user_channels_count)
+    buttons = InlineKeyboardMarkup(inline_keyboard=buttons_list)
+    await call.message.edit_text("Твои каналы 👇", reply_markup=buttons)

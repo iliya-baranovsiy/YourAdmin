@@ -13,7 +13,7 @@ adding_router = Router()
 @adding_router.callback_query(F.data == 'add_channel')
 async def add_channel(call: CallbackQuery, state: FSMContext):
     buttons = InlineKeyboardMarkup(inline_keyboard=back_to_menu)
-    await call.message.answer('Введи id канала, который хочешь добавить 👇', reply_markup=buttons)
+    await call.message.edit_text('Введи id канала, который хочешь добавить 👇', reply_markup=buttons)
     await state.set_state(WaitChannelId.wait_id)
 
 
@@ -23,11 +23,15 @@ async def get_id(msg: Message, state: FSMContext):
     owner_id = int(msg.chat.id)
     status = await check_channel(channel_id)
     if status:
-        buttons = InlineKeyboardMarkup(inline_keyboard=settings_or_menu)
-        await msg.answer('Канал успешно привязан ✅', reply_markup=buttons)
-        await channels_db_work.write_channel(channel_id=int(channel_id), owner=owner_id, title=status)
-        await users_db.update_channel_count(tg_id=owner_id, operate='+')
-        await state.clear()
+        try:
+            buttons = InlineKeyboardMarkup(inline_keyboard=settings_or_menu)
+            await channels_db_work.write_channel(channel_id=int(channel_id), owner=owner_id, title=status)
+            await users_db.update_channel_count(tg_id=owner_id, operate='+')
+            await state.clear()
+            await msg.answer('Канал успешно привязан ✅', reply_markup=buttons)
+        except:
+            buttons = InlineKeyboardMarkup(inline_keyboard=back_to_menu)
+            await msg.answer('Ошибка при привязке попробуй ещё раз или вернись в меню 👇', reply_markup=buttons)
     else:
         buttons = InlineKeyboardMarkup(inline_keyboard=back_to_menu)
         await msg.answer('Ошибка при привязке попробуй ещё раз или вернись в меню 👇', reply_markup=buttons)

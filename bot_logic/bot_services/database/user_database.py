@@ -2,7 +2,7 @@ from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.dialects.postgresql import insert
 from configurations.loadEnv import ASYNC_DATA_BASE_URL
-from sqlalchemy import select, update
+from sqlalchemy import select, update, delete
 from bot_logic.bot_services.database.models import User, Channels
 import asyncio
 
@@ -56,10 +56,15 @@ class ChannelWork:
         async with self.session() as session:
             async with session.begin():
                 new_channel = insert(Channels).values(channel_id=channel_id, owner=owner, title=title)
-                new_channel = new_channel.on_conflict_do_nothing(index_elements=['channel_id'])
                 await session.execute(new_channel)
+
+    async def delete_channel(self, channel_id):
+        async with self.session() as session:
+            async with session.begin():
+                channel_to_delete = await session.get(Channels, int(channel_id))
+                await session.delete(channel_to_delete)
 
 
 users_db = UserDbWork()
 channels_db_work = ChannelWork()
-#print(asyncio.run(channels_db_work.get_user_channels(1832511762)))
+# print(asyncio.run(channels_db_work.get_user_channels(1832511762)))
