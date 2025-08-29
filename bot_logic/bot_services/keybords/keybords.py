@@ -5,3 +5,8 @@ main_menu = [
     [InlineKeyboardButton(text='Информация о сервисе 📝', callback_data='service_info')],
     [InlineKeyboardButton(text='Как добавить кнаал ❓', callback_data='how_add_channel')]
 ]
+
+add_channel_menu = [
+    [InlineKeyboardButton(text='Добавить канал 🚀', callback_data='add_channel')],
+    [InlineKeyboardButton(text='Вернуться в меню 📊', callback_data='back_main_menu')]
+]
