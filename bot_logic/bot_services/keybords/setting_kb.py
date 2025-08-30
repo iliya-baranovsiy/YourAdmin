@@ -1,12 +1,17 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
+from bot_logic.bot_services.database.user_database import channels_db_work
 
 
 async def channel_info_kb(channel_id, channel_name):
+    data = await channels_db_work.get_channel_settings(int(channel_id))
     channel_info_menu = [
         [InlineKeyboardButton(text="Настройки постинга", callback_data=f'settings_{channel_id}_{channel_name}')],
         [InlineKeyboardButton(text="Удалить канал", callback_data=f'delete_{channel_id}_{channel_name}')],
         [InlineKeyboardButton(text='Вернуться в назад ⬅️', callback_data='back_to_chan_info')]
     ]
+    if data[0] != None and data[1] != None:
+        channel_info_menu.insert(0, [
+            InlineKeyboardButton(text='Сделать пост', callback_data=f'makepost_{channel_id}_{channel_name}')])
     return channel_info_menu
 
 
