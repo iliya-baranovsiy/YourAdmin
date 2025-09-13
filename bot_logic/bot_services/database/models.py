@@ -22,6 +22,7 @@ class Channels(Base):
     post_count = Column(Integer, default=0)
 
     times = relationship("TimesIntervals", back_populates="channel", cascade="all, delete, delete-orphan")
+    published = relationship("PublishNews", back_populates='channel', cascade='all, delete, delete-orphan')
 
 
 class TimesIntervals(Base):
@@ -31,6 +32,15 @@ class TimesIntervals(Base):
     time = Column(String)
 
     channel = relationship("Channels", back_populates="times")
+
+
+class PublishNews(Base):
+    __tablename__ = "publish_news"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    channel_id = Column(BigInteger, ForeignKey('channels.channel_id', ondelete='CASCADE'))
+    news_title = Column(String)
+
+    channel = relationship("Channels", back_populates="published")
 
 
 def create_tables():

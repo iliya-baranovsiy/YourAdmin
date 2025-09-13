@@ -3,6 +3,7 @@ from aiogram.types import Message
 from bot_logic.bot_services.database.user_database import users_db, channels_db_work
 from bot_logic.bot_services.keybords.setting_kb import *
 from bot_logic.bot_services.bot_functions.help_functions import refactoring
+from bot_logic.bot_services.bot_functions.sender import send_post
 
 setting_router = Router()
 
@@ -205,3 +206,15 @@ async def set_news_type(call: CallbackQuery):
         buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_settings_menu(channel_id, channel_name))
         await call.message.edit_text('Произошла ошика, поробуй ещё раз',
                                      reply_markup=buttons)
+
+
+@setting_router.callback_query(F.data.startswith(("makepost")))
+async def make_post(call: CallbackQuery):
+    data = call.data.split('_')
+    channel_id = data[1]
+    channel_name = data[2]
+    await send_post(int(channel_id))
+    buttons = InlineKeyboardMarkup(inline_keyboard=await channel_info_kb(channel_id, channel_name))
+
+    await call.message.answer(
+        f"Меню по каналу {channel_name}", reply_markup=buttons)

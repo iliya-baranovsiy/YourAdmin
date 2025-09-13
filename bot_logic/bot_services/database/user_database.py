@@ -2,8 +2,9 @@ from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.dialects.postgresql import insert
 from configurations.loadEnv import ASYNC_DATA_BASE_URL
-from sqlalchemy import select, update, delete
-from bot_logic.bot_services.database.models import User, Channels, TimesIntervals
+from sqlalchemy import select, update, delete, func
+from bot_logic.bot_services.database.models import User, Channels, TimesIntervals, PublishNews
+from services.scrap_db_work import ItNews, CultureNews, CryptoNews, SportNews, ScienceNews, GameNews
 import asyncio
 
 Base = declarative_base()
@@ -110,6 +111,14 @@ class ChannelWork(BaseWork):
                     post_count=Channels.post_count + 1)
                 await session.execute(new)
 
+    async def get_post_count(self, channel_id):
+        async with self.session() as session:
+            async with session.begin():
+                query = select(Channels.post_count).where(Channels.channel_id == channel_id)
+                result = await session.execute(query)
+                rows = result.scalar_one_or_none()
+                return rows
+
 
 class TimesIntervalsWork(BaseWork):
     async def set_time(self, channel_id, target_time):
@@ -139,9 +148,51 @@ class TimesIntervalsWork(BaseWork):
                 return rows
 
 
+class SendLogic(BaseWork):
+    async def add_publish(self, channel_id, news_title):
+        async with self.session() as session:
+            async with session.begin():
+                new_publish = insert(PublishNews).values(channel_id=channel_id, news_title=news_title)
+                await session.execute(new_publish)
+
+    async def get_news(self, channel_id, news_theme):
+        async with self.session() as session:
+            async with session.begin():
+                target_table = None
+                if news_theme == 'sport':
+                    target_table = SportNews
+                elif news_theme == 'crypto':
+                    target_table = CryptoNews
+                elif news_theme == 'game':
+                    target_table = GameNews
+                elif news_theme == 'it':
+                    target_table = ItNews
+                elif news_theme == 'culture':
+                    target_table = CultureNews
+                elif news_theme == 'science':
+                    target_table = ScienceNews
+
+                published_subquery = (
+                    select(PublishNews.news_title)
+                    .where(PublishNews.channel_id == channel_id)
+                )
+                query = (
+                    select(target_table.text, target_table.title, target_table.picture)
+                    .where(~target_table.title.in_(published_subquery))
+                    .order_by(func.random())
+                    .limit(1)
+                )
+                result = await session.execute(query)
+                news = result.first()
+                return news
+
+
 users_db = UserDbWork()
 channels_db_work = ChannelWork()
 times_db = TimesIntervalsWork()
+send_logic_db = SendLogic()
+# print(asyncio.run(channels_db_work.get_post_count(-1002798314681)))
+# print(asyncio.run(send_logic_db.get_news(-1002989249599, 'it')))
 # print(asyncio.run(channels_db_work.get_date_count(-1002798314681)))
-# asyncio.run(channels_db_work.get_channel_settings(-1002798314681))
+# print(asyncio.run(channels_db_work.get_channel_settings(-1002798314681)))
 # print(asyncio.run(channels_db_work.get_user_channels(1832511762)))
