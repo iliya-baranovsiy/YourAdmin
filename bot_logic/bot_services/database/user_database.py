@@ -152,7 +152,7 @@ class TimesIntervalsWork(BaseWork):
             async with session.begin():
                 query = select(TimesIntervals.time).where(TimesIntervals.channel_id == int(channel_id))
                 result = await session.execute(query)
-                rows = result.all()
+                rows = [i[0] for i in result.all()]
                 return rows
 
 
@@ -214,3 +214,4 @@ send_logic_db = SendLogic()
 # print(asyncio.run(channels_db_work.get_user_channels(1832511762)))
 # print(asyncio.run(send_logic_db.get_channels_with_target_time('15:30')))
 # print(asyncio.run(channels_db_work.get_channel_owner_id(-1002989249599)))
+# print(asyncio.run(times_db.get_times(-1002798314681)))

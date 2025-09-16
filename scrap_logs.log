@@ -221,3 +221,326 @@ INFO:aiogram.event:Update id=844155783 is handled. Duration 77 ms by bot id=8236
 INFO:aiogram.event:Update id=844155784 is handled. Duration 77 ms by bot id=8236920908
 INFO:aiogram.dispatcher:Polling stopped
 INFO:aiogram.dispatcher:Polling stopped for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.event:Update id=844155785 is handled. Duration 2375 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155786 is handled. Duration 155 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155787 is handled. Duration 78 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155788 is handled. Duration 63 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155789 is not handled. Duration 0 ms by bot id=8236920908
+ERROR:aiogram.event:Cause exception while process update id=844155789 by bot id=8236920908
+AttributeError: 'NoneType' object has no attribute 'send'
+Traceback (most recent call last):
+  File "D:\python\Lib\asyncio\base_events.py", line 792, in call_soon
+    self._check_closed()
+  File "D:\python\Lib\asyncio\base_events.py", line 539, in _check_closed
+    raise RuntimeError('Event loop is closed')
+RuntimeError: Event loop is closed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\bot_logic\handlers\time_handler.py", line 26, in set_times_menu
+    await show_times_menu(call, channel_id, channel_name)
+  File "D:\my\YourChannelAdmin\bot_logic\handlers\time_handler.py", line 14, in show_times_menu
+    times = await times_db.get_times(channel_id)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\bot_logic\bot_services\database\user_database.py", line 154, in get_times
+    result = await session.execute(query)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\ext\asyncio\session.py", line 463, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2365, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\orm\session.py", line 2251, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\orm\context.py", line 306, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1419, in execute
+    return meth(
+           ^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\sql\elements.py", line 526, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1641, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 2358, in _handle_dbapi_exception
+    raise exc_info[1].with_traceback(exc_info[2])
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\engine\base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\engine\default.py", line 951, in do_execute
+    cursor.execute(statement, parameters)
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 580, in execute
+    self._adapt_connection.await_(
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\util\_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 515, in _prepare_and_execute
+    await adapt_connection._start_transaction()
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 845, in _start_transaction
+    self._handle_exception(error)
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 794, in _handle_exception
+    raise error
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\sqlalchemy\dialects\postgresql\asyncpg.py", line 843, in _start_transaction
+    await self._transaction.start()
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\asyncpg\transaction.py", line 146, in start
+    await self._connection.execute(query)
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\asyncpg\connection.py", line 349, in execute
+    result = await self._protocol.query(query, timeout)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg\\protocol\\protocol.pyx", line 375, in query
+  File "asyncpg\\protocol\\protocol.pyx", line 368, in asyncpg.protocol.protocol.BaseProtocol.query
+  File "asyncpg\\protocol\\coreproto.pyx", line 1174, in asyncpg.protocol.protocol.CoreProtocol._simple_query
+  File "asyncpg\\protocol\\protocol.pyx", line 967, in asyncpg.protocol.protocol.BaseProtocol._write
+  File "D:\python\Lib\asyncio\proactor_events.py", line 366, in write
+    self._loop_writing(data=bytes(data))
+  File "D:\python\Lib\asyncio\proactor_events.py", line 402, in _loop_writing
+    self._write_fut = self._loop._proactor.send(self._sock, data)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'send'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.event:Update id=844155790 is handled. Duration 2359 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155791 is handled. Duration 171 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155792 is handled. Duration 108 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155793 is handled. Duration 110 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155794 is handled. Duration 141 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155795 is handled. Duration 156 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155796 is handled. Duration 125 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155797 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155798 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155799 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155800 is handled. Duration 78 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155801 is handled. Duration 202 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155802 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155803 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155804 is handled. Duration 125 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155805 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155806 is handled. Duration 93 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155807 is handled. Duration 109 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155808 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155809 is handled. Duration 109 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155810 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155811 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155812 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155813 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155814 is handled. Duration 78 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155815 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155816 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155817 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155818 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.event:Update id=844155819 is handled. Duration 2468 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155820 is handled. Duration 156 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155821 is handled. Duration 63 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155822 is handled. Duration 78 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155823 is handled. Duration 265 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155824 is handled. Duration 93 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155825 is not handled. Duration 0 ms by bot id=8236920908
+ERROR:aiogram.event:Cause exception while process update id=844155825 by bot id=8236920908
+TypeError: TimesIntervalsWork.get_times() missing 1 required positional argument: 'channel_id'
+Traceback (most recent call last):
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\bot_logic\handlers\time_handler.py", line 48, in get_time
+    times = await times_db.get_times()
+                  ^^^^^^^^^^^^^^^^^^^^
+TypeError: TimesIntervalsWork.get_times() missing 1 required positional argument: 'channel_id'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.event:Update id=844155827 is handled. Duration 61 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155826 is handled. Duration 2500 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155828 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155829 is handled. Duration 141 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155830 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155831 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155832 is handled. Duration 141 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155833 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155834 is handled. Duration 108 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155835 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155836 is handled. Duration 155 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155837 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155838 is handled. Duration 171 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155839 is handled. Duration 109 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155840 is handled. Duration 125 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155841 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155842 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155843 is handled. Duration 61 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155844 is handled. Duration 109 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155845 is handled. Duration 108 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155846 is handled. Duration 61 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155847 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155848 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155849 is handled. Duration 63 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155850 is handled. Duration 125 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155851 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155852 is handled. Duration 108 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155853 is handled. Duration 61 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155854 is handled. Duration 61 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155855 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155856 is handled. Duration 61 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155857 is handled. Duration 61 ms by bot id=8236920908
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.event:Update id=844155858 is handled. Duration 327 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155859 is handled. Duration 94 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155860 is handled. Duration 94 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155861 is handled. Duration 93 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155862 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155863 is handled. Duration 94 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155864 is handled. Duration 61 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155865 is handled. Duration 155 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155866 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155867 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.event:Update id=844155868 is handled. Duration 2375 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155869 is handled. Duration 141 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155870 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155871 is handled. Duration 110 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155872 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155873 is handled. Duration 140 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155874 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155875 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155876 is handled. Duration 77 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155877 is handled. Duration 94 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155878 is handled. Duration 78 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155879 is handled. Duration 94 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155880 is handled. Duration 78 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155881 is handled. Duration 47 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155882 is handled. Duration 94 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155883 is handled. Duration 141 ms by bot id=8236920908
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:aiogram.event:Update id=844155884 is handled. Duration 2343 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155885 is handled. Duration 140 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155886 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155887 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155888 is handled. Duration 62 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155889 is handled. Duration 93 ms by bot id=8236920908
+INFO:aiogram.event:Update id=844155890 is handled. Duration 61 ms by bot id=8236920908
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'

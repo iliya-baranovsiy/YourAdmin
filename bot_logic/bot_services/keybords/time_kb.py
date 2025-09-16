@@ -10,17 +10,23 @@ async def manage_time(times: list, channel_id, channel_name):
                 [InlineKeyboardButton(text='Добавить время', callback_data=f'addTime_{channel_id}_{channel_name}')])
             for i in times:
                 buttons.append(
-                    [InlineKeyboardButton(text=f'{i[0]}', callback_data=f'delTime_{i[0]}_{channel_id}_{channel_name}')])
+                    [InlineKeyboardButton(text=f'{i}', callback_data=f'delTime_{i}_{channel_id}_{channel_name}')])
         else:
             buttons.append(
                 [InlineKeyboardButton(text='Добавить время', callback_data=f'addTime_{channel_id}_{channel_name}')])
     else:
         for i in times:
             buttons.append(
-                [InlineKeyboardButton(text=f'{i[0]}', callback_data=f'delTime_{i[0]}_{channel_id}_{channel_name}')])
+                [InlineKeyboardButton(text=f'{i}', callback_data=f'delTime_{i}_{channel_id}_{channel_name}')])
     buttons.append(
         [InlineKeyboardButton(text='Вернуться назад', callback_data=f'postnigmenu_{channel_id}_{channel_name}')])
     return buttons
+
+
+async def back_to_setting_menu(channel_id, channel_name):
+    return [
+        [InlineKeyboardButton(text='Вернуться назад', callback_data=f'postnigmenu_{channel_id}_{channel_name}')]
+    ]
 
 
 async def back_button(channel_id, channel_name):

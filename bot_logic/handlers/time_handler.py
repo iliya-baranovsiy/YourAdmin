@@ -5,6 +5,7 @@ from bot_logic.bot_services.database.user_database import times_db
 from aiogram.fsm.context import FSMContext
 from bot_logic.bot_services.bot_functions.states import WaitChannelId
 from bot_logic.bot_services.bot_functions.help_functions import time_validation
+from bot_logic.bot_services.database.user_database import channels_db_work
 from datetime import datetime
 
 time_router = Router()
@@ -23,7 +24,13 @@ async def set_times_menu(call: CallbackQuery):
     data = call.data.split('_')
     channel_id = data[1]
     channel_name = data[2]
-    await show_times_menu(call, channel_id, channel_name)
+    buttons = InlineKeyboardMarkup(inline_keyboard=await back_to_setting_menu(channel_id, channel_name))
+    channel_settings = await channels_db_work.get_channel_settings(int(channel_id))
+    if channel_settings[0] != None and channel_settings[1] != None:
+        await show_times_menu(call, channel_id, channel_name)
+    else:
+        await call.message.edit_text("Ты не можешь установить время пока не настроишь все пункты постинга",
+                                     reply_markup=buttons)
 
 
 @time_router.callback_query(F.data.startswith(("addTime")))
@@ -45,10 +52,16 @@ async def get_time(msg: Message, state: FSMContext):
     channel_name = data.get('channel_name')
     buttons = InlineKeyboardMarkup(inline_keyboard=await back_button(channel_id, channel_name))
     if is_valid:
+        times = await times_db.get_times(channel_id)
         target_time = datetime.strptime(msg.text, '%H:%M').strftime('%H:%M')
-        await times_db.set_time(channel_id=channel_id, target_time=target_time)
-        await msg.answer("Время установлено успешно", reply_markup=buttons)
-        await state.clear()
+        if target_time in times:
+            await msg.answer(
+                "Произошла ошибка,такое время уже существует для текущего канала,попробуй заново или вернись  в меню",
+                reply_markup=buttons)
+        else:
+            await times_db.set_time(channel_id=channel_id, target_time=target_time)
+            await msg.answer("Время установлено успешно", reply_markup=buttons)
+            await state.clear()
     else:
         await msg.answer("Произошла ошибка, попробуй заново или вернись  в меню", reply_markup=buttons)
 
