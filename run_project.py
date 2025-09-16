@@ -1,8 +1,19 @@
 from scraping.scrap import clean_db, run_scraping
 import threading
+from bot_logic.main import main
+from bot_logic.bot_services.bot_functions.time_tracker import track_time
+import asyncio
+
+
+async def run_async_func():
+    task_bot = asyncio.create_task(main())
+    task_tracker = asyncio.create_task(track_time())
+    await asyncio.gather(task_bot, task_tracker)
+
 
 if __name__ == '__main__':
-    clean = threading.Thread(target=clean_db)
+    """clean = threading.Thread(target=clean_db)
     run_scrap = threading.Thread(target=run_scraping)
     run_scrap.start()
-    clean.start()
+    clean.start()"""
+    asyncio.run(run_async_func())

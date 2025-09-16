@@ -119,6 +119,14 @@ class ChannelWork(BaseWork):
                 rows = result.scalar_one_or_none()
                 return rows
 
+    async def get_channel_owner_id(self, channel_id):
+        async with self.session() as session:
+            async with session.begin():
+                query = select(Channels.owner).where(Channels.channel_id == int(channel_id))
+                result = await session.execute(query)
+                owner_id = result.scalar()
+                return owner_id
+
 
 class TimesIntervalsWork(BaseWork):
     async def set_time(self, channel_id, target_time):
@@ -174,7 +182,7 @@ class SendLogic(BaseWork):
 
                 published_subquery = (
                     select(PublishNews.news_title)
-                    .where(PublishNews.channel_id == channel_id)
+                    .where(PublishNews.channel_id == int(channel_id))
                 )
                 query = (
                     select(target_table.text, target_table.title, target_table.picture)
@@ -186,6 +194,14 @@ class SendLogic(BaseWork):
                 news = result.first()
                 return news
 
+    async def get_channels_with_target_time(self, current_time):
+        async with self.session() as session:
+            async with session.begin():
+                query = select(TimesIntervals.channel_id).where(TimesIntervals.time == str(current_time))
+                result = await session.execute(query)
+                rows = [i[0] for i in result.all()]
+                return rows
+
 
 users_db = UserDbWork()
 channels_db_work = ChannelWork()
@@ -196,3 +212,5 @@ send_logic_db = SendLogic()
 # print(asyncio.run(channels_db_work.get_date_count(-1002798314681)))
 # print(asyncio.run(channels_db_work.get_channel_settings(-1002798314681)))
 # print(asyncio.run(channels_db_work.get_user_channels(1832511762)))
+# print(asyncio.run(send_logic_db.get_channels_with_target_time('15:30')))
+# print(asyncio.run(channels_db_work.get_channel_owner_id(-1002989249599)))

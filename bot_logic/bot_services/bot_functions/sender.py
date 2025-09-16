@@ -3,9 +3,9 @@ from bot_logic.bot_services.database.user_database import channels_db_work, send
 
 
 async def send_post(channel_id):
-    owner_id = 1832511762
     post_count = await channels_db_work.get_post_count(channel_id)
     settings = await channels_db_work.get_channel_settings(channel_id=channel_id)
+    owner_id = await channels_db_work.get_channel_owner_id(channel_id)
     theme = settings[0]
     if post_count < 3:
         news = await send_logic_db.get_news(channel_id=channel_id, news_theme=theme)
