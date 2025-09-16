@@ -45,7 +45,7 @@ class PublishNews(Base):
 class ChannelsPosts(Base):
     __tablename__ = "channel_posts"
     id = Column(Integer, primary_key=True, autoincrement=True)
-    channel_id = Column(BigInteger)
+    channel_id = Column(BigInteger, unique=True)
     post_count = Column(Integer, default=0)
 
 
@@ -53,4 +53,4 @@ def create_tables():
     engine = create_engine(DATA_BASE_URL)
     Base.metadata.create_all(engine)
 
-create_tables()
+# create_tables()

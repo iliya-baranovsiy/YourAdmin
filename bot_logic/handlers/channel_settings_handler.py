@@ -212,9 +212,4 @@ async def set_news_type(call: CallbackQuery):
 async def make_post(call: CallbackQuery):
     data = call.data.split('_')
     channel_id = data[1]
-    channel_name = data[2]
     await send_post(int(channel_id))
-    buttons = InlineKeyboardMarkup(inline_keyboard=await channel_info_kb(channel_id, channel_name))
-
-    await call.message.answer(
-        f"Меню по каналу {channel_name}", reply_markup=buttons)

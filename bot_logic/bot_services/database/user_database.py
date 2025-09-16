@@ -53,13 +53,25 @@ class ChannelWork(BaseWork):
                 data_dict = {title: channel_id for channel_id, title in rows}
                 return data_dict
 
+    async def get_channels_from_post(self):
+        async with self.session() as session:
+            async with session.begin():
+                query = select(ChannelsPosts.channel_id)
+                result = await session.execute(query)
+                res_list = [i[0] for i in result.all()]
+                return res_list
+
     async def write_channel(self, channel_id, owner, title):
         async with self.session() as session:
             async with session.begin():
                 new_channel = insert(Channels).values(channel_id=channel_id, owner=owner, title=title)
                 await session.execute(new_channel)
-                new_channel_in_counts = insert(ChannelsPosts).values(channel_id=channel_id)
-                await session.execute(new_channel_in_counts)
+                channels = await self.get_channels_from_post()
+                if channel_id in channels:
+                    pass
+                else:
+                    new_channel_in_counts = insert(ChannelsPosts).values(channel_id=channel_id)
+                    await session.execute(new_channel_in_counts)
 
     async def delete_channel(self, channel_id):
         async with self.session() as session:
@@ -128,6 +140,13 @@ class ChannelWork(BaseWork):
                 result = await session.execute(query)
                 owner_id = result.scalar()
                 return owner_id
+
+    async def set_default_post_count(self):
+        async with self.session() as session:
+            async with session.begin():
+                new = update(ChannelsPosts).values(
+                    post_count=0)
+                await session.execute(new)
 
 
 class TimesIntervalsWork(BaseWork):
@@ -217,3 +236,5 @@ send_logic_db = SendLogic()
 # print(asyncio.run(send_logic_db.get_channels_with_target_time('15:30')))
 # print(asyncio.run(channels_db_work.get_channel_owner_id(-1002989249599)))
 # print(asyncio.run(times_db.get_times(-1002798314681)))
+# print(asyncio.run(channels_db_work.set_default_post_count()))
+# print(asyncio.run(channels_db_work.get_channels_from_post()))
