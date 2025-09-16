@@ -19,7 +19,6 @@ class Channels(Base):
     title = Column(String)
     theme = Column(String, default=None)
     type = Column(String, default=None)
-    post_count = Column(Integer, default=0)
 
     times = relationship("TimesIntervals", back_populates="channel", cascade="all, delete, delete-orphan")
     published = relationship("PublishNews", back_populates='channel', cascade='all, delete, delete-orphan')
@@ -43,8 +42,15 @@ class PublishNews(Base):
     channel = relationship("Channels", back_populates="published")
 
 
+class ChannelsPosts(Base):
+    __tablename__ = "channel_posts"
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    channel_id = Column(BigInteger)
+    post_count = Column(Integer, default=0)
+
+
 def create_tables():
     engine = create_engine(DATA_BASE_URL)
     Base.metadata.create_all(engine)
 
-# create_tables()
+create_tables()

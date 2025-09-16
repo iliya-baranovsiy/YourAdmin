@@ -3,7 +3,7 @@ from sqlalchemy.orm import declarative_base
 from sqlalchemy.dialects.postgresql import insert
 from configurations.loadEnv import ASYNC_DATA_BASE_URL
 from sqlalchemy import select, update, delete, func
-from bot_logic.bot_services.database.models import User, Channels, TimesIntervals, PublishNews
+from bot_logic.bot_services.database.models import User, Channels, TimesIntervals, PublishNews, ChannelsPosts
 from services.scrap_db_work import ItNews, CultureNews, CryptoNews, SportNews, ScienceNews, GameNews
 import asyncio
 
@@ -58,6 +58,8 @@ class ChannelWork(BaseWork):
             async with session.begin():
                 new_channel = insert(Channels).values(channel_id=channel_id, owner=owner, title=title)
                 await session.execute(new_channel)
+                new_channel_in_counts = insert(ChannelsPosts).values(channel_id=channel_id)
+                await session.execute(new_channel_in_counts)
 
     async def delete_channel(self, channel_id):
         async with self.session() as session:
@@ -107,14 +109,14 @@ class ChannelWork(BaseWork):
     async def plus_posts_a_day(self, channel_id):
         async with self.session() as session:
             async with session.begin():
-                new = update(Channels).where(Channels.channel_id == channel_id).values(
-                    post_count=Channels.post_count + 1)
+                new = update(ChannelsPosts).where(ChannelsPosts.channel_id == channel_id).values(
+                    post_count=ChannelsPosts.post_count + 1)
                 await session.execute(new)
 
     async def get_post_count(self, channel_id):
         async with self.session() as session:
             async with session.begin():
-                query = select(Channels.post_count).where(Channels.channel_id == channel_id)
+                query = select(ChannelsPosts.post_count).where(ChannelsPosts.channel_id == channel_id)
                 result = await session.execute(query)
                 rows = result.scalar_one_or_none()
                 return rows
