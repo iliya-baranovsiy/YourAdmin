@@ -52,5 +52,3 @@ class ChannelsPosts(Base):
 def create_tables():
     engine = create_engine(DATA_BASE_URL)
     Base.metadata.create_all(engine)
-
-# create_tables()

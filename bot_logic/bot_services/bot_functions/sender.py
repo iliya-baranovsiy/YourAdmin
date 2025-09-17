@@ -24,6 +24,9 @@ async def send_post(channel_id):
                 await channels_db_work.plus_posts_a_day(channel_id=channel_id)
                 await send_logic_db.add_publish(channel_id=channel_id, news_title=news_title)
             except:
-                await bot.send_message(chat_id=owner_id, text="Ошибка при отправке", reply_markup=buttons)
+                await bot.send_message(chat_id=owner_id,
+                                       text="Ошибка при отправке поста, проверь настройки канла или обратись в поддержку 😊",
+                                       reply_markup=buttons)
     else:
-        await bot.send_message(chat_id=owner_id, text="Суточное кол-во постов превышено", reply_markup=buttons)
+        await bot.send_message(chat_id=owner_id, text="Пост не отправлен. Суточное кол-во постов превышено 🤯",
+                               reply_markup=buttons)

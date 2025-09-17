@@ -14,8 +14,8 @@ async def run_async_func():
 
 
 if __name__ == '__main__':
-    """clean = threading.Thread(target=clean_db)
     run_scrap = threading.Thread(target=run_scraping)
+    clean = threading.Thread(target=clean_db)
     run_scrap.start()
-    clean.start()"""
+    clean.start()
     asyncio.run(run_async_func())

@@ -7,6 +7,7 @@ from bot_logic.bot_services.keybords.keybords import *
 from aiogram.fsm.context import FSMContext
 from aiogram.filters.state import StateFilter
 from bot_logic.bot_services.keybords.logic_kb import chanells_kb
+from bot_logic.bot_services.bot_functions.texts import *
 
 router = Router()
 
@@ -15,7 +16,8 @@ router = Router()
 async def start_dialog(msg: Message):
     tg_id = msg.chat.id
     buttons = InlineKeyboardMarkup(inline_keyboard=main_menu)
-    await msg.answer('Привет, здесь будет приветствие и краткая информация, ещё причешим :)')
+    text = await greetings(msg.chat.first_name)
+    await msg.answer(text, parse_mode='HTML')
     await users_db.write_user(tg_id=tg_id)
     await asyncio.sleep(2)
     await msg.answer('Главное меню 📊', reply_markup=buttons)
@@ -55,7 +57,12 @@ async def back_main_menu(call: CallbackQuery, state: FSMContext):
 @router.message(StateFilter(None))
 async def free_mes(msg: Message):
     buttons = InlineKeyboardMarkup(inline_keyboard=main_menu)
-    await msg.answer('Выбери один пункт из меню, чтобы продолжить ☺️', reply_markup=buttons)
+    if msg.text == '/help':
+        await msg.answer("Напиши моему администратору @ilya_baranouski,он всегда поможет ☺️")
+        await asyncio.sleep(2)
+        await msg.answer('Главное меню 📊', reply_markup=buttons)
+    else:
+        await msg.answer('Выбери один пункт из меню, чтобы продолжить ☺️', reply_markup=buttons)
 
 
 @router.callback_query(F.data == 'back_to_chan_info')

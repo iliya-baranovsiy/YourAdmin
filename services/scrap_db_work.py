@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, Column, Integer, String, Date, delete
+from sqlalchemy import create_engine, Column, Integer, String, Date, delete, func
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.orm import sessionmaker
 from configurations.loadEnv import DATA_BASE_URL
@@ -74,7 +74,7 @@ class BaseWork:
         target_date = datetime.now().date() - timedelta(days=2)
         with self._Session() as session:
             for i in class_list:
-                stmt = delete(i).where(i.adding_Date == target_date)
+                stmt = delete(i).where(i.adding_Date <= target_date)
                 session.execute(stmt)
             session.commit()
 
@@ -164,3 +164,4 @@ science_news_db = ScienceNewsWork()
 culture_news_db = CultureNewsWork()
 sport_mews_db = SportNewsWork()
 base = BaseWork()
+base._create_bases()

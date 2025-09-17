@@ -15,7 +15,7 @@ async def show_times_menu(call: CallbackQuery, channel_id, channel_name):
     times = await times_db.get_times(channel_id)
     buttons = InlineKeyboardMarkup(
         inline_keyboard=await manage_time(times=times, channel_id=channel_id, channel_name=channel_name))
-    await call.message.edit_text(f"Меню времени канала {channel_name}\nДля удаления времени, нажми на нужное время",
+    await call.message.edit_text(f"Меню времени канала {channel_name}\nДля удаления времени, нажми на нужное время 😉",
                                  reply_markup=buttons)
 
 
@@ -29,7 +29,7 @@ async def set_times_menu(call: CallbackQuery):
     if channel_settings[0] != None and channel_settings[1] != None:
         await show_times_menu(call, channel_id, channel_name)
     else:
-        await call.message.edit_text("Ты не можешь установить время пока не настроишь все пункты постинга",
+        await call.message.edit_text("Ты не можешь установить время пока не настроишь все пункты постинга 😞",
                                      reply_markup=buttons)
 
 
@@ -39,7 +39,7 @@ async def set_time(call: CallbackQuery, state: FSMContext):
     channel_id = data[1]
     channel_name = data[2]
     buttons = InlineKeyboardMarkup(inline_keyboard=await back_button(channel_id, channel_name))
-    await call.message.edit_text('Напиши время в формате чч:мм', reply_markup=buttons)
+    await call.message.edit_text('Напиши время в формате чч:мм ⏰', reply_markup=buttons)
     await state.update_data(channel_id=channel_id, channel_name=channel_name)
     await state.set_state(WaitChannelId.wait_input_time)
 
@@ -56,14 +56,14 @@ async def get_time(msg: Message, state: FSMContext):
         target_time = datetime.strptime(msg.text, '%H:%M').strftime('%H:%M')
         if target_time in times:
             await msg.answer(
-                "Произошла ошибка,такое время уже существует для текущего канала,попробуй заново или вернись  в меню",
+                "Такое время уже существует для текущего канала,попробуй заново или вернись  в меню ☺️",
                 reply_markup=buttons)
         else:
             await times_db.set_time(channel_id=channel_id, target_time=target_time)
-            await msg.answer("Время установлено успешно", reply_markup=buttons)
+            await msg.answer("Время установлено успешно ✅", reply_markup=buttons)
             await state.clear()
     else:
-        await msg.answer("Произошла ошибка, попробуй заново или вернись  в меню", reply_markup=buttons)
+        await msg.answer("Произошла ошибка, попробуй заново или вернись  в меню 😉", reply_markup=buttons)
 
 
 @time_router.callback_query(F.data.startswith(("backToTimes")))
@@ -83,7 +83,7 @@ async def request_to_delete_time(call: CallbackQuery):
     buttons = InlineKeyboardMarkup(
         inline_keyboard=await agree_to_delete_time(time_to_delete=time_to_del, channel_id=channel_id,
                                                    channel_name=channel_name))
-    await call.message.edit_text(f"Ты уверен что хочешь удалить данное время с канала {channel_name}",
+    await call.message.edit_text(f"Ты уверен что хочешь удалить данное время с канала {channel_name} 🧐",
                                  reply_markup=buttons)
 
 
@@ -96,6 +96,6 @@ async def del_time(call: CallbackQuery):
     buttons = InlineKeyboardMarkup(inline_keyboard=await back_button(channel_id=channel_id, channel_name=channel_name))
     try:
         await times_db.delete_time(channel_id=channel_id, time_to_del=time_to_del)
-        await call.message.edit_text("Время удалено успешно", reply_markup=buttons)
+        await call.message.edit_text("Время удалено успешно ✅", reply_markup=buttons)
     except:
-        await call.message.edit_text("Ошибка удаления", reply_markup=buttons)
+        await call.message.edit_text("Ошибка удаления ❌", reply_markup=buttons)
