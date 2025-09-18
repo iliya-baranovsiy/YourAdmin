@@ -8,6 +8,8 @@ from aiogram.fsm.context import FSMContext
 from aiogram.filters.state import StateFilter
 from bot_logic.bot_services.keybords.logic_kb import chanells_kb
 from bot_logic.bot_services.bot_functions.texts import *
+from bot_logic.bot_services.bot_functions.states import *
+from bot_logic.bot_services.keybords.adding_kb import back_to_menu
 
 router = Router()
 
@@ -39,12 +41,32 @@ async def user_channels(call: CallbackQuery):
 
 @router.callback_query(F.data == "service_info")
 async def information(call: CallbackQuery):
-    await call.message.edit_text("Информация")
+    buttons = InlineKeyboardMarkup(inline_keyboard=back_to_menu)
+    await call.message.edit_text(text=info_text, parse_mode="HTML", reply_markup=buttons)
 
 
 @router.callback_query(F.data == "how_add_channel")
-async def how_add(call: CallbackQuery):
-    await call.message.edit_text("Инструкция")
+async def how_add_channel(call: CallbackQuery):
+    buttons = InlineKeyboardMarkup(inline_keyboard=back_to_menu)
+    await call.message.edit_text(text=how_add_text, parse_mode="HTML", reply_markup=buttons)
+
+
+@router.callback_query(F.data == "know_channel_id")
+async def know_channel_id(call: CallbackQuery, state: FSMContext):
+    buttons = InlineKeyboardMarkup(inline_keyboard=back_to_menu)
+    await call.message.edit_text("Перешли мне сообщение из канала, ID которого хочешь узнать 😉", reply_markup=buttons)
+    await state.set_state(WaitChannelId.wait_forward_message)
+
+
+@router.message(WaitChannelId.wait_forward_message)
+async def get_forward_id(msg: Message, state: FSMContext):
+    buttons = InlineKeyboardMarkup(inline_keyboard=back_to_menu)
+    if msg.forward_from_chat and msg.forward_from_chat.type == "channel":
+        forward_id = str(msg.forward_from_chat.id)
+        await msg.answer(f"<b>ID канала:</b> {forward_id}", parse_mode='HTML', reply_markup=buttons)
+    else:
+        await msg.answer("Я не могу определить откуда это сообщение 😞", reply_markup=buttons)
+    await state.clear()
 
 
 @router.callback_query(F.data == "back_main_menu")

@@ -1030,3 +1030,761 @@ INFO:aiogram.dispatcher:Start polling
 INFO:aiogram.dispatcher:Run polling for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
 INFO:aiogram.dispatcher:Polling stopped
 INFO:aiogram.dispatcher:Polling stopped for bot @ChanellAdm_bot id=8236920908 - 'ChanellAdm'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608378 is handled. Duration 2469 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608379 is handled. Duration 218 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608380 is handled. Duration 78 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608381 is handled. Duration 2297 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608382 is handled. Duration 77 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608383 is not handled. Duration 0 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608384 is handled. Duration 2343 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608385 is handled. Duration 108 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608386 is not handled. Duration 0 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608387 is handled. Duration 2452 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608388 is handled. Duration 125 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608389 is not handled. Duration 0 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608390 is handled. Duration 2312 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608391 is handled. Duration 46 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608392 is handled. Duration 62 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608393 is handled. Duration 2187 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608394 is handled. Duration 2375 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608395 is handled. Duration 46 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608396 is not handled. Duration 16 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608397 is handled. Duration 2343 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608398 is handled. Duration 62 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608399 is not handled. Duration 0 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608400 is handled. Duration 2358 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608401 is handled. Duration 108 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608402 is handled. Duration 93 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608404 is handled. Duration 2312 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608403 is handled. Duration 2312 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608405 is handled. Duration 2359 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608406 is handled. Duration 2140 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608407 is handled. Duration 77 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608408 is handled. Duration 109 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608409 is handled. Duration 2140 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608410 is handled. Duration 94 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608411 is not handled. Duration 0 ms by bot id=7865770798
+ERROR:aiogram.event:Cause exception while process update id=24608411 by bot id=7865770798
+AttributeError: 'NoneType' object has no attribute 'id'
+Traceback (most recent call last):
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\bot_logic\handlers\start_handle.py", line 54, in get_forward_id
+    forward_id = msg.forward_from_chat.id
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+INFO:aiogram.event:Update id=24608412 is handled. Duration 2156 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608413 is handled. Duration 47 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608414 is not handled. Duration 0 ms by bot id=7865770798
+ERROR:aiogram.event:Cause exception while process update id=24608414 by bot id=7865770798
+AttributeError: 'NoneType' object has no attribute 'id'
+Traceback (most recent call last):
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\bot_logic\handlers\start_handle.py", line 54, in get_forward_id
+    forward_id = msg.forward_from_chat.id
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608415 is handled. Duration 2375 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608416 is handled. Duration 94 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608417 is not handled. Duration 0 ms by bot id=7865770798
+ERROR:aiogram.event:Cause exception while process update id=24608417 by bot id=7865770798
+AttributeError: 'NoneType' object has no attribute 'id'
+Traceback (most recent call last):
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\bot_logic\handlers\start_handle.py", line 54, in get_forward_id
+    forward_id = msg.forward_from.id
+                 ^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608418 is handled. Duration 2500 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608419 is handled. Duration 77 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608420 is handled. Duration 62 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608421 is handled. Duration 2156 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608422 is handled. Duration 47 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608423 is not handled. Duration 0 ms by bot id=7865770798
+ERROR:aiogram.event:Cause exception while process update id=24608423 by bot id=7865770798
+AttributeError: 'NoneType' object has no attribute 'id'
+Traceback (most recent call last):
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\bot_logic\handlers\start_handle.py", line 54, in get_forward_id
+    forward_id = msg.forward_from_chat.id
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608424 is handled. Duration 2296 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608425 is handled. Duration 93 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608426 is not handled. Duration 0 ms by bot id=7865770798
+ERROR:aiogram.event:Cause exception while process update id=24608426 by bot id=7865770798
+AttributeError: 'NoneType' object has no attribute 'id'
+Traceback (most recent call last):
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\bot_logic\handlers\start_handle.py", line 54, in get_forward_id
+    forward_id = msg.forward_from_chat.id
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608427 is handled. Duration 2405 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608428 is handled. Duration 93 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608429 is not handled. Duration 0 ms by bot id=7865770798
+ERROR:aiogram.event:Cause exception while process update id=24608429 by bot id=7865770798
+AttributeError: 'NoneType' object has no attribute 'id'
+Traceback (most recent call last):
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\bot_logic\handlers\start_handle.py", line 54, in get_forward_id
+    forward_id = msg.forward_from_chat.id
+                 ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'id'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 23 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608430 is handled. Duration 2327 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608431 is handled. Duration 108 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608432 is handled. Duration 78 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608433 is handled. Duration 47 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608434 is handled. Duration 78 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608435 is not handled. Duration 0 ms by bot id=7865770798
+ERROR:aiogram.event:Cause exception while process update id=24608435 by bot id=7865770798
+AttributeError: 'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\bot_logic\handlers\start_handle.py", line 56, in get_forward_id
+    if msg.forward_from_chat.type == "channel":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'type'
+INFO:aiogram.event:Update id=24608436 is handled. Duration 2187 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608437 is handled. Duration 62 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608438 is not handled. Duration 0 ms by bot id=7865770798
+ERROR:aiogram.event:Cause exception while process update id=24608438 by bot id=7865770798
+AttributeError: 'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\bot_logic\handlers\start_handle.py", line 56, in get_forward_id
+    if msg.forward_from_chat.type == "channel":
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'type'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 0 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608439 is handled. Duration 2344 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608440 is handled. Duration 140 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608441 is not handled. Duration 0 ms by bot id=7865770798
+ERROR:aiogram.event:Cause exception while process update id=24608441 by bot id=7865770798
+AttributeError: 'NoneType' object has no attribute 'type'
+Traceback (most recent call last):
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "D:\my\YourChannelAdmin\bot_logic\handlers\start_handle.py", line 56, in get_forward_id
+    if msg.forward_from_chat.type == "channel" and msg.forward_from_chat:
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'type'
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 0 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608442 is handled. Duration 2313 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608443 is handled. Duration 78 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608444 is handled. Duration 141 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608445 is handled. Duration 62 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608446 is handled. Duration 125 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608447 is handled. Duration 93 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608448 is handled. Duration 125 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608449 is handled. Duration 155 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608450 is handled. Duration 77 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608451 is handled. Duration 108 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 0 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608452 is handled. Duration 2390 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608453 is handled. Duration 63 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608454 is handled. Duration 109 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608455 is handled. Duration 94 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608456 is handled. Duration 2125 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608457 is handled. Duration 187 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608458 is handled. Duration 109 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608459 is handled. Duration 63 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608460 is handled. Duration 77 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608461 is handled. Duration 61 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608462 is handled. Duration 63 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608463 is handled. Duration 125 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608464 is handled. Duration 2233 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608465 is handled. Duration 63 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608466 is handled. Duration 250 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608467 is handled. Duration 311 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608468 is handled. Duration 108 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608469 is handled. Duration 47 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 0 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608471 is handled. Duration 2422 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608470 is handled. Duration 2452 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608472 is handled. Duration 2172 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608473 is handled. Duration 77 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608474 is handled. Duration 77 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608475 is handled. Duration 61 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 0 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608476 is handled. Duration 2390 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608477 is handled. Duration 78 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608478 is handled. Duration 62 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608479 is handled. Duration 94 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608480 is handled. Duration 2202 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608481 is handled. Duration 109 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608482 is handled. Duration 94 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 0 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608483 is handled. Duration 2359 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608484 is handled. Duration 47 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608485 is handled. Duration 94 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608486 is handled. Duration 125 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608487 is handled. Duration 77 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608488 is handled. Duration 62 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608489 is handled. Duration 93 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608490 is handled. Duration 61 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608491 is handled. Duration 47 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608492 is handled. Duration 77 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 0 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608493 is handled. Duration 2297 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608494 is handled. Duration 93 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608495 is handled. Duration 94 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608496 is handled. Duration 77 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608497 is handled. Duration 110 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608498 is handled. Duration 109 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608499 is handled. Duration 63 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:scraping.scrap:—бор выполнен в 0 часов
+INFO:scraping.scrap:Old data delete
+INFO:aiogram.dispatcher:Start polling
+INFO:aiogram.dispatcher:Run polling for bot @test2fefe_bot id=7865770798 - 'test'
+INFO:aiogram.event:Update id=24608500 is handled. Duration 2328 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608501 is handled. Duration 77 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608502 is handled. Duration 62 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608503 is handled. Duration 172 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608504 is handled. Duration 46 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608505 is handled. Duration 125 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608506 is handled. Duration 94 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608507 is handled. Duration 61 ms by bot id=7865770798
+INFO:aiogram.event:Update id=24608508 is handled. Duration 93 ms by bot id=7865770798
+INFO:aiogram.dispatcher:Polling stopped
+INFO:aiogram.dispatcher:Polling stopped for bot @test2fefe_bot id=7865770798 - 'test'
